@@ -13,7 +13,6 @@ import { observable } from 'rxjs';
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
-  selectedHero: Hero;
 
   constructor(
     private heroService: HeroService
@@ -23,14 +22,9 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   }
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
-
   getHeroes(): void {
     let observableHeroes = this.heroService.getHeroes();
     observableHeroes.subscribe(recievedHeroes => this.heroes = recievedHeroes);
-    // this.heroes = this.heroService.getHeroes();
   }
 
 }
