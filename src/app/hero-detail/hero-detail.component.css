@@ -14,9 +14,10 @@ input {
 
 button {
   margin-top: 20px;
+  margin-right: 3px;
   font-family: Arial;
   background-color: #eee;
-  border: none;
+  border-right: 3px;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
@@ -25,6 +26,7 @@ button {
 
 button:hover {
   background-color: #CFD8DC;
+  color: #039be5;
 }
 
 button:disabled {
